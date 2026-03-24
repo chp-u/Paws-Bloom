@@ -70,6 +70,10 @@ export default defineConfig({
   build: {
     sourcemap: true,
     outDir: "out",
+    rollupOptions: {
+      // index.html の場所を明示的に指定
+      input: resolve(__dirname, "index.html"),
+    },
   },
   resolve: {
     alias: {
